@@ -1,3 +1,5 @@
+require '../util'
+
 def get_test_input
   [
     'forward 5',
@@ -9,9 +11,9 @@ def get_test_input
   ]
 end
 
-def get_file_input
-  File.readlines("input.txt")
-end
+#def get_file_input
+#  File.readlines("input.txt")
+#end
 
 def main
   pos = 0
@@ -19,7 +21,7 @@ def main
   aim = 0
 
   #for entry in get_test_input
-  for entry in get_file_input
+  for entry in Util.get_file_input
     direction, amount = entry.split(" ")
     amount = amount.to_i
     case direction
